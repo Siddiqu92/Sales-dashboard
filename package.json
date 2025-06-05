@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
+    "@tailwindcss/postcss": "^4.1.8",
     "@types/chart.js": "^2.9.41",
     "@types/node": "^20.0.0",
     "@types/react": "^19.0.0",
