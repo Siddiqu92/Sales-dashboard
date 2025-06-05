@@ -153,16 +153,16 @@ export const dashboardData = {
     total: "$250,000",
     change: "+15%",
     quarters: ["Q1", "Q2", "Q3", "Q4"],
-    data: [60, 70, 80, 90] // Sample data for the chart
+    data: [60, 70, 80, 90] // You can also calculate this dynamically from monthly sales
   },
   customerDistribution: {
     total: "1000 Customers",
     change: "+5%",
     regions: [
-      { name: "North", value: 25, color: "#FF6384" },
-      { name: "South", value: 50, color: "#36A2EB" },
-      { name: "East", value: 100, color: "#FFCE56" },
-      { name: "West", value: 33, color: "#4BC0C0" }
+      { name: "North", value: 286, color: "#FF6384" },
+      { name: "South", value: 286, color: "#36A2EB" },
+      { name: "East", value: 286, color: "#FFCE56" },
+      { name: "West", value: 142, color: "#4BC0C0" }
     ]
   }
 };

@@ -40,18 +40,19 @@ export default function CustomerTable() {
               <TableCell sx={{ fontSize: '0.875rem' }}>{user.contact}</TableCell>
               <TableCell sx={{ fontSize: '0.875rem' }}>{user.lastInteraction}</TableCell>
               <TableCell>
-                <span style={{
-                  color: user.status === 'Active' ? '#16a34a' : '#dc2626',
-                  backgroundColor: user.status === 'Active' ? '#f0fdf4' : '#fef2f2',
-                  padding: '4px 12px',
-                  borderRadius: '12px',
-                  fontSize: '0.75rem',
-                  fontWeight: 500,
-                  textTransform: 'capitalize',
-                  display: 'inline-block'
-                }}>
-                  {user.status}
-                </span>
+               <span style={{
+  color: user.status.toLowerCase() === 'active' ? '#16a34a' : '#dc2626',
+  backgroundColor: user.status.toLowerCase() === 'active' ? '#f0fdf4' : '#fef2f2',
+  padding: '4px 12px',
+  borderRadius: '12px',
+  fontSize: '0.75rem',
+  fontWeight: 500,
+  textTransform: 'capitalize',
+  display: 'inline-block'
+}}>
+  {user.status}
+</span>
+
               </TableCell>
             </TableRow>
           ))}

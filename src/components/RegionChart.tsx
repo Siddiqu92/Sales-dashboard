@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -10,21 +10,21 @@ import {
   Legend,
 } from 'chart.js';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-export default function RegionChart() {
+type RegionChartProps = {
+  regionCounts: Record<string, number>;
+};
+
+export default function RegionChart({ regionCounts }: RegionChartProps) {
+  const labels = Object.keys(regionCounts);
+  const values = Object.values(regionCounts);
+
   const data = {
-    labels: ['North', 'South', 'East', 'West'],
+    labels,
     datasets: [
       {
-        data: [25, 50, 100, 33],
+        data: values,
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -44,9 +44,7 @@ export default function RegionChart() {
       },
     },
     scales: {
-      x: {
-        display: false,
-      },
+      x: { display: false },
     },
   };
 
