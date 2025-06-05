@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 import QuarterlyChart from './QuarterlyChart';
 import { userData } from '../app/data';
 
-function getTotalSalesForQuarter(quarter: 'Q4') {
+function getTotalSalesForQ4() {
   const months = ['October', 'November', 'December'];
   let total = 0;
 
@@ -19,7 +19,7 @@ function getTotalSalesForQuarter(quarter: 'Q4') {
 }
 
 export default function SalesCard() {
-  const q4Sales = getTotalSalesForQuarter('Q4');
+  const q4Sales = getTotalSalesForQ4();
 
   return (
     <Card sx={{ height: '100%' }}>
